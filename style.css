@@ -1,0 +1,147 @@
+/* Estilos de index.html */
+
+/* Configuración de las variables globales */
+:root {
+    /* Configuración de variables de colores */
+    --primary-color: #9f3647;
+    --secondary-color: #fdede3;
+    --third-color: #db4648;
+    --third-bis-color: #db4648f2;
+    /*colores de fondo*/
+    --bg-color: #181419;
+    --bg-input-color: #2f1b352c;
+    /*fuente primaria*/
+    --primary-font: Arial, sans-serif, helvetica;
+
+
+}
+
+/* La coma es como un and, se aplican los estilo a ambas etiquetas*/
+body,
+html {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 2vh 0;
+}
+
+/*   Crea un contenedor flexible: 
+  Al aplicar display: flex a un elemento padre, se convierte en un contenedor flexible 
+  que organiza a sus elementos hijos de manera flexible 
+  en una sola línea o en varias líneas según sea necesario. */
+/* Predispone al padre para q los hijos sean flexibles */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+/* Pseudoclases es un selector que marca los elementos que están en un estado 
+  específico first-child: significa primer hijo */
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li:last-child{
+    margin-right: 2vw;
+}
+
+/* Trabajamos con etiquetas clickeables */
+nav ul li a, nav>a{
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: background-color 0.3s; 
+}
+
+nav ul li a:hover{
+    background-color: var(--bg-input-color);
+
+}
+
+/* Animaciones del botón */
+.container{
+    display: flex;
+    justify-content: center; /* Horizontal */
+    align-items: center;    /* Vertical */
+    height: 100vh;
+}
+
+.btn{
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+}
+
+.btn:hover{
+    background-color: var(--third-bis-color);
+}
+
+/* Animaciones */
+@keyframes pulso {
+    0% {
+        transform: scale(1);
+    }    
+    50% {
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/*Desencadenante*/
+.btn:hover{
+    animation: pulso 0.5s infinite alternate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
